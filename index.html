@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest countries</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+  </head>
+  <body onload="getApi()">
+      <div class="whale-section">
+          <header class="header">
+                <a class="header__text" href="./index.html">
+                    <h1>Where in the world?</h1>
+                </a>
+                <div class="header__dark-mode-text" onclick="darkModeBtn()">
+                    <ion-icon name="moon-outline"></ion-icon> 
+                    <p>Dark Mode</p>             
+                </div>
+          </header>
+          <main class="content">
+              <div class="content__row">
+                  <div class="content__search">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <input type="text" class="search-input" onkeyup="getVisitorSearch()" placeholder="Search for a country…"> 
+                </div>
+                <div class="content__region">
+                    <div class="content__region__op-cl" onclick="region()">
+                        <h3>Filter by Region</h3>
+                        <ion-icon name="chevron-down-outline" class="arrow"></ion-icon>
+                    </div>
+                    <div class="content__region__block">
+                        <ul class="content__region__block__list">
+                            <li onclick="getRegionApi('africa')">Africa</li>
+                            <li onclick="getRegionApi('america')">America</li>
+                            <li onclick="getRegionApi('asia')">Asia</li>
+                            <li onclick="getRegionApi('europe')">Europe</li>
+                            <li onclick="getRegionApi('oceania')">Oceania</li>
+                        </ul>
+                    </div>
+                </div>
+              </div>
+              <div class="content__main"></div>
+              <div class="content__more"></div>
+          </main>
+      </div>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <script src="./main.js"></script>
+  </body>
+</html>

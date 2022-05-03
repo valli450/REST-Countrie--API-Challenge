@@ -1,0 +1,466 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --dark-blue: hsl(209, 23%, 22%); /* Dark Mode Elements */
+    --very-dark-blue: hsl(207, 26%, 17%); /* Dark Mode Background */
+    --very-dark-blue-light: hsl(200, 15%, 8%); /* Light Mode Text*/
+    --very-light-gray: hsl(0, 0%, 98%); /* Light Mode Background */
+    --white: hsl(0, 0%, 100%); /* Dark Mode Text & Light Mode Elements */
+}
+
+/* Styles */
+
+
+.whale-section{
+    background: hsl(0, 0%, 98%);
+    transition: background-color 0.5s;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.header{
+    height: 5rem;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
+    transition: background-color 0.5s;
+    box-shadow: 0px 0px 20px -10px rgba(0,0,0,.25);
+}
+
+.header__text{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header__text h1{
+    color: var(--very-dark-blue-light);
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 20px;
+    transition: color 0.5s;
+
+}
+
+.header__dark-mode-text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+}
+
+.header__dark-mode-text ion-icon{
+    width: 13px;
+    height: 13px;
+}
+
+.header__dark-mode-text p{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--very-dark-blue-light);
+    transition: color 0.5s;
+}
+
+.content__search{
+    margin: 1.5rem 1rem;
+    width: 21.4rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--white);
+    padding-left: 2rem;
+    gap: 1.6rem;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+    box-shadow: 0px 0px 20px -10px rgba(0,0,0,.25);
+}
+
+.content__search ion-icon{
+    color: #b3b3b3;
+    transition: color 0.5s;
+}
+
+.search-input{
+    width: 7.25rem;
+    height: 1.25rem;
+    border: none;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    outline: none;
+    cursor: pointer;
+    font-weight: 400;
+    transition: color 0.5s, background-color 0.5s;
+}
+
+.search-input::placeholder{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #C4C4C4;
+    transition: color 0.5s;
+}
+
+.content__region__op-cl{
+    margin: 1rem;
+    padding: 0 1rem;
+    width: 12.5rem;
+    background-color: var(--white);
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+    box-shadow: 0px 0px 20px -10px rgba(0,0,0,.25);
+}
+
+.content__region__op-cl h3{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #111517;
+    transition: color 0.5s;
+}
+
+.content__region__op-cl ion-icon{
+    width: 10px;
+    cursor: pointer;
+}
+
+.content__region__block__list{
+    width: 12.5rem;
+    position: absolute;
+    margin: -0.75rem 1rem 1rem 1rem;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: var(--white);
+    border-radius: 5px;
+    height: 0;
+    transition: height 0.2s;
+    transition: background-color 0.5s;
+    box-shadow: 0px 0px 20px -10px rgba(0,0,0,.25);
+    z-index: -1;
+}
+
+
+.content__region__block__list li{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #111517;
+    list-style: none;
+    cursor: pointer; 
+    transition: opacity 0.2s, color 0.5s;
+    opacity: 0;
+    
+}
+
+.showRegionMenu{
+    height: 9rem;
+    opacity: 1;
+    z-index: 1;
+}
+
+.showRegionMenu li{
+    opacity: 1;
+}
+
+
+.content__main{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin: 1.5rem auto;
+    width: 16.5rem;
+}
+
+.content__main__block{
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    background-color: var(--white);
+    border-radius: 5px;
+    transition: background-color 0.5s;
+    box-shadow: 0px 0px 20px -10px rgba(0,0,0,.25);
+}
+
+
+.content__main__block__image img{
+    margin-top: -1px;
+    width: 16.5rem;
+    height: 10rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.content__main__block__text{
+    padding: 0 1rem;
+    margin-top: -0.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 1rem;
+}
+
+.content__main__block__text h2{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 26px;
+    color: #111517;
+    transition: color 0.5s;
+}
+
+.content__main__block__text__about{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.bold-text{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 16px;
+    color: #111517;
+    transition: color 0.5s;
+}
+
+.content__main__block__text__about p{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #111517;
+    transition: color 0.5s;
+}
+
+
+body .darkMode{
+    background-color: var(--very-dark-blue);
+}
+
+.darkMode .header{
+    background-color: var(--dark-blue);
+}
+
+.darkMode .header__text h1{
+    color: #fff;
+}
+
+.darkMode .header__dark-mode-text ion-icon{
+    color: #fff;
+}
+
+.darkMode .header__dark-mode-text p{
+    color: #fff;
+}
+
+.darkMode .content__search{
+    background-color: var(--dark-blue);
+}
+
+.darkMode .content__search ion-icon{
+    color: #fff;
+}
+
+.darkMode .search-input{
+    background-color: var(--dark-blue);
+    color: #fff;
+}
+
+.darkMode .search-input::placeholder{
+    color: #fff;
+}
+
+.darkMode .content__region__op-cl{
+    background-color: var(--dark-blue);
+}
+
+.darkMode .content__region__op-cl h3{
+    color: #fff;
+}
+
+.darkMode .content__region__block__list{
+    background-color: var(--dark-blue);
+}
+
+.darkMode .content__region__block__list li{
+    color: #fff;
+}
+
+
+.darkMode .content__main__block{
+    background-color: var(--dark-blue);
+}
+
+.darkMode .content__main__block__text h2{
+    color: #fff;
+}
+
+.darkMode .bold-text{
+    color: #fff;
+}
+
+.darkMode .content__main__block__text__about p{
+    color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+    .content__search{
+        width: 35rem;
+    }
+
+    .search-input{
+        width: 20rem;
+    }
+
+    .content__main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 1.5rem auto;
+        width: 46rem;
+    }
+
+    .content__main__block{
+        height: 23rem;
+    }
+    
+    
+    .content__main__block__image img{
+        width: 100%;
+        height: 12rem;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .content__search{
+        width: 40rem;
+    }
+
+    .search-input{
+        width: 24rem;
+    }
+
+    .content__main{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 1.5rem auto;
+        width: 50rem;
+    }
+
+    .content__main__block{
+        height: 18rem;
+    }
+    
+    
+    .content__main__block__image img{
+        width: 100%;
+        height: 8rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .header{
+        padding: 0 5rem;
+    }
+    
+    .header__text h1{
+        font-size: 24px;
+        line-height: auto;
+    
+    }
+    
+    .header__dark-mode-text{
+        gap: 0.5rem;
+    }
+    
+    .header__dark-mode-text ion-icon{
+        width: 20px;
+        height: 20px;
+    }
+    
+    .header__dark-mode-text p{
+        font-size: 16px;
+    }
+
+    .content__row{
+        margin: 3rem 5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .content__search{
+        margin: 0;
+        width: 30rem;
+    }
+    
+    .content__search ion-icon{
+        width: 32px;
+        height: 25px;
+    }
+    
+    .search-input{
+        width: 23rem;
+        font-size: 14px;
+    }
+    
+    .search-input::placeholder{
+        font-size: 14px;
+    }
+    
+    .content__region__op-cl h3{
+        font-size: 14px;
+    }
+    
+    
+    .content__region__block__list li{
+        font-size: 14px;
+    }
+    
+    .content__main{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 4.6rem;
+        margin: 3rem auto;
+        width: 80rem;
+    }
+    
+    .content__main__block{
+        width: 16.5rem;
+        height: 21rem;
+    }
+    
+    
+    .content__main__block__image img{
+        width: 16.5rem;
+        height: 10rem;
+    }
+    
+    .content__main__block__text{
+        padding: 0 1.5rem;
+    }
+
+}
